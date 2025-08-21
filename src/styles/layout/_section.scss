@@ -1,0 +1,30 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.section-container {
+    display: block;
+    width: 100%;
+    height: auto;
+    @include flex-center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.section-titles-container {
+    width: 100%;
+    height: auto;
+    @include flex-center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section-title {
+    font-size: 3.8rem;
+    font-weight: $font-heading-weight;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    font-weight: $font-text-weight;
+}

@@ -1,0 +1,26 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
+
+$ingredient-height: 45px;
+$ingredient-title-size: 2.2rem;
+
+.ingredient {
+    position: relative;
+    width: auto;
+    height: $ingredient-height;
+}
+
+.ingredientSvg {
+    height: 100%;
+    width: 100%;
+}
+
+.ingredientTitle {
+    font-family: $font-text;
+    font-weight: $font-text-weight + 100;
+    font-size: $ingredient-title-size;
+    fill: $blue;
+    alignment-baseline: middle;
+    dominant-baseline: middle;
+    text-anchor: start;
+}

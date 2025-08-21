@@ -1,0 +1,13 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.ingredients-input-cont {
+    width: 100%;
+    height: auto;
+    @include flex-center;
+}
+
+.ingredients-input {
+    width: 25%;
+    @include input;
+}

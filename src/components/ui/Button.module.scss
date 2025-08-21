@@ -1,0 +1,46 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
+
+$button-size: 2.5rem;
+
+.buttonContainer {
+    position: relative;
+    z-index: 100;
+    width: $button-size;
+    height: $button-size;
+}
+
+.buttonBackground {
+    position: absolute;
+    bottom: -12%;
+    z-index: -10;
+    width: 100%;
+    height: 90%;
+    background-color: $blue;
+    border: $border;
+    border-top: 1px solid transparent;
+    border-radius: $border-radius;
+
+}
+
+.button {
+    display: block;
+    width: $button-size;
+    height: $button-size;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: $salmon;
+    transition: transform 0.3s ease;
+    @include flex-center;
+
+    &:hover {
+        transform: translateY(12%);
+    }
+
+
+    // &-icon {
+    //     width: calc($button-size - 0.5rem);
+    //     height: calc($button-size - 0.5rem);
+    // }
+
+}

@@ -1,0 +1,22 @@
+@use '../../../styles/abstract/variables' as *;
+@use '../../../styles/abstract/mixins' as *;
+
+$side-bar-width-mobile: 30%;
+$side-bar-width-desktop: 20%;
+
+.navigationContainer {
+    width: $side-bar-width-mobile;
+    height: 100vh;
+    border-right: $border;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-top: 30px;
+
+    @media (min-width: 430px) {
+        width: $side-bar-width-desktop;
+    }
+}
+
+// .navigationSelect {}

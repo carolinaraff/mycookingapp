@@ -1,0 +1,17 @@
+@use '../../components/sections/recipe/SideBar.module.scss' as *;
+
+.recipe-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.recipe-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 10px;
+    padding-right: 60px;
+}

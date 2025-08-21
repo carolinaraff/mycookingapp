@@ -1,0 +1,393 @@
+@use '../../../styles/abstract/variables' as *;
+@use '../../../styles/abstract/kitchen' as *;
+@use '../../../styles/abstract/mixins' as *;
+
+.illustration {
+    position: relative;
+    width: 100%;
+    height: calc($kitchen-container-height + 100px);
+    @include flex-center;
+}
+
+.kitchen-cont {
+    width: auto;
+    height: $fridge-height + $lamp-container-height;
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+
+    .fridge-side {
+        position: relative;
+        width: $fridge-width;
+        height: $fridge-height + $lamp-container-height;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        .fridge-cont {
+            position: relative;
+            width: $fridge-width;
+            height: $fridge-height;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -9px;
+                left: 20px;
+                width: 30px;
+                height: 10px;
+                background-color: $blue;
+                border-radius: calc($kitchen-border-radius / 2);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -9px;
+                right: 20px;
+                width: 30px;
+                height: 10px;
+                background-color: $blue;
+                border-radius: calc($kitchen-border-radius / 2);
+            }
+
+            .back {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 85%;
+                height: 100%;
+                background-color: $blue;
+            }
+
+            .freezer {
+                position: relative;
+                width: 100%;
+                height: 25%;
+                background-color: $salmon;
+                border: $border;
+                border-radius: $kitchen-border-radius;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 10%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 6px;
+                    height: 60%;
+                    background-color: $blue;
+                    border-radius: $kitchen-border-radius;
+                }
+            }
+
+
+            .fridge {
+                position: relative;
+                width: 100%;
+                height: 74%;
+                background-color: $salmon;
+                border: $border;
+                border-radius: $kitchen-border-radius;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 10%;
+                    top: 40%;
+                    transform: translateY(-40%);
+                    width: 6px;
+                    height: 60%;
+                    background-color: $blue;
+                    border-radius: $kitchen-border-radius;
+                }
+
+            }
+        }
+
+        .lamp {
+            position: relative;
+            width: 80px;
+            height: $lamp-container-height;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-cord {
+                width: 1px;
+                height: 70px;
+                background-color: $blue;
+            }
+
+            &-case-shadow {
+                position: absolute;
+                z-index: -10;
+                top: 70px;
+                width: 70%;
+                height: 30px;
+                background-color: $blue;
+                border-radius: 1px;
+            }
+
+            &-case {
+                position: relative;
+                z-index: 99;
+                width: 100%;
+                height: 60px;
+                border: $border;
+                border-bottom: none;
+                border-radius: 100px 100px 0 0;
+                background: $salmon;
+
+                &-base {
+                    position: absolute;
+                    bottom: -10px;
+                    width: 100%;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $blue;
+
+                    .lamp-bulb {
+                        position: absolute;
+                        left: 50%;
+                        top: 1.5px;
+                        transform: translateX(-50%);
+                        width: 15px;
+                        height: 12px;
+                        border: $border;
+                        border-top: none;
+                        border-bottom: none;
+                        border-radius: 0 0 100px 100px;
+                        background: $salmon;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .kitchen {
+        &-counter {
+            position: relative;
+            width: $kitchen-counter-width;
+            height: $kitchen-counter-height;
+            display: flex;
+            border-bottom: 4px solid $blue;
+            border-right: $border;
+            border-left: $border;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: -6px;
+                top: 0;
+                width: calc($kitchen-counter-width + 10px);
+                height: 8px;
+                background-color: $blue;
+            }
+
+            &-sink {
+                position: absolute;
+                top: -$kitchen-counter-sink-height;
+                left: 8%;
+                transform: translateX(-8%);
+                width: $kitchen-counter-sink-width;
+                height: $kitchen-counter-sink-height;
+
+                &-cont {
+                    position: relative;
+                    left: 49%;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 5px;
+                }
+
+                &-base {
+                    position: absolute;
+                    bottom: -1px;
+                    width: 100%;
+                    height: 5px;
+                    background-color: $blue;
+                }
+            }
+
+
+
+            &-cabinet {
+                width: 100px;
+                height: 100%;
+                border-right: $border;
+            }
+
+            .cabinet {
+                &-left {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 10%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 4px;
+                        height: 36px;
+                        background-color: $blue;
+
+                    }
+                }
+
+                &-right {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 10%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 4px;
+                        height: 36px;
+                        background-color: $blue;
+
+                    }
+                }
+            }
+
+            &-oven {
+                width: 180px;
+                height: 100%;
+                border-right: $border;
+
+                &-top {
+                    width: 100%;
+                    height: 25%;
+                    @include flex-center;
+                    gap: 5px;
+                    border-bottom: $border;
+
+                    .button {
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        border: $border;
+                    }
+
+                    .screen {
+                        position: relative;
+                        width: 35px;
+                        height: 10px;
+                        background-color: $blue;
+
+                        &::after {
+                            content: '...';
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 6px;
+                            letter-spacing: 4px;
+                            color: $blue;
+                        }
+                    }
+                }
+
+                &-door {
+                    width: 100%;
+                    height: 75%;
+                    @include flex-center;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .handle {
+                        width: 70%;
+                        height: 5px;
+                        background-color: $blue;
+                        border-radius: 20px;
+                    }
+
+                    .glass {
+                        position: relative;
+                        width: 70%;
+                        height: 100px;
+                        border: $border;
+                        margin-top: 4px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 85%;
+                            height: 85%;
+                            background-image: $background-image;
+                            border: $border;
+                        }
+
+                    }
+                }
+
+            }
+
+            &-drawers {
+                width: 100px;
+                height: 100%;
+                border-right: $border;
+
+                .drawer {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 25%;
+                    border-bottom: $border;
+
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 35%;
+                        transform: translate(-50%, -35%);
+                        width: 6px;
+                        height: 6px;
+                        background-color: $blue;
+                        border-radius: 50%;
+                    }
+
+                }
+            }
+
+            &-second-cabinet {
+                position: relative;
+                width: 100px;
+                height: 100%;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 15%;
+                    top: 20%;
+                    transform: translate(-15%, -20%);
+                    width: 4px;
+                    height: 48px;
+                    background-color: $blue;
+                }
+            }
+
+
+
+        }
+
+
+    }
+}

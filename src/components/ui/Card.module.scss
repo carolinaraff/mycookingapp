@@ -1,0 +1,55 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/card' as *;
+@use '../../styles/abstract/mixins' as *;
+
+$card-width: 360px;
+$card-height: 200px;
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: $card-width;
+    height: $card-height;
+    border: $border;
+    border-top: none;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.scallop {
+    @include scallop;
+}
+
+.card {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 1rem);
+    background-color: $salmon;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    transform: translateX(-15%);
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: $blue;
+}
+
+.categoryCont {
+    width: 100%;
+    // min-height: calc($card-height / 3);
+    border-top: $border;
+    border-bottom: $border;
+    @include flex-center;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+}
+
+.category {
+    font-size: 2.4rem;
+    font-weight: $font-heading-weight;
+}

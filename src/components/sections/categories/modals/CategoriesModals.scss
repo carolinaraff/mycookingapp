@@ -1,0 +1,37 @@
+@use '../../../../styles/abstract/variables' as *;
+
+
+.container {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.inputCont {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.input {
+    margin: 0 auto;
+    width: 50%;
+    border-bottom: $border;
+    font-size: 1.3rem;
+    font-family: $font-text;
+    font-weight: $font-text-weight;
+    color: $blue;
+    text-align: center;
+}

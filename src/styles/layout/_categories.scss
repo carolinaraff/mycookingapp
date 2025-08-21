@@ -1,0 +1,60 @@
+@use '../abstract/card' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.cards-list {
+    position: relative;
+    width: 80vw;
+    height: $card-height;
+    @include flex-center;
+    overflow: hidden;
+}
+
+.card-item {
+    position: absolute;
+    top: 0;
+}
+
+.categories-buttons {
+    width: $card-width;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.modal {
+    &-container {
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-title {
+        @include modal-title;
+    }
+
+    &-subtitle {
+        width: 50%;
+        font-size: 1.3rem;
+        font-family: $font-text;
+        font-weight: $font-text-weight;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &-input-container {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    &-input {
+        margin: 0 auto;
+        width: 80%;
+        @include input;
+    }
+}

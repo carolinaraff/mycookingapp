@@ -1,0 +1,41 @@
+$blue: #1c11ee;
+$blue-transparency: #1c11ee65;
+$orange: #ff8c68;
+$salmon: #f7b7a3;
+$salmon-2: #f7b5a1;
+$border: 1px solid $blue;
+$border-radius: 1rem;
+$kitchen-border-radius: 4px;
+$background-image: repeating-linear-gradient(45deg,
+        #f3c2a7 0 2px,
+        blue 3px 3.5px);
+
+$font-heading: "Playfair Display", serif;
+$font-text: "Open Sans",
+    sans-serif;
+$font-heading-weight: 500;
+$font-text-weight: 300;
+$font-card-weight: 400;
+
+//Cards
+// $scallop-size: 30px;
+// $scallop-radius: calc($scallop-size / 2);
+// $card-width: 360px;
+// $card-height: calc(180px + $scallop-size);
+// $card-title-size: 2.6rem;
+
+// Kitchen Illustration
+
+// $kitchen-counter-width: 580px;
+// $kitchen-counter-height: 200px;
+// $kitchen-counter-sink-width: 120px;
+// $kitchen-counter-sink-height: 80px;
+// $sink-head-border-width: 0.5rem;
+// $fridge-width: 200px;
+// $fridge-height: 450px;
+// $kitchen-container-height: $fridge-height;
+// $lamp-container-height: 150px;
+// $kitchen-illus-width: $kitchen-counter-width + $fridge-width + 20px;
+
+
+//Spinning Wheel
